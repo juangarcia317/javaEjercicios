@@ -10,4 +10,20 @@ package com.retos2022;
 
 public class Reto1 {
 
+	public static void main(String[] args) {
+		
+	}
+	private boolean esAnagrama(String cad1, String cad2) {
+		boolean bRes = false;
+		if (!cad1.equals(cad2) && (cad1.length() == cad2.length() )) {
+			//Si son distintas ya es false y si tienen distinto tamaño false también
+			boolean bSonIguales = true;
+			int i = cad1.length(); 
+			while (bSonIguales && i < cad2.length()) {
+				
+			}
+				
+		}
+		return bRes;
+	}
 }
