@@ -1,4 +1,7 @@
 package com.retos2022;
+
+import java.util.Arrays;
+
 /*
  * Escribe una función que reciba dos palabras (String) y retorne
  * verdadero o falso (Bool) según sean o no anagramas.
@@ -11,19 +14,22 @@ package com.retos2022;
 public class Reto1 {
 
 	public static void main(String[] args) {
-		
+		boolean bAnagrama = esAnagrama("Enrique", "quieren");
+		System.out.println("anagrama: " + bAnagrama);
+
 	}
-	private boolean esAnagrama(String cad1, String cad2) {
-		boolean bRes = false;
-		if (!cad1.equals(cad2) && (cad1.length() == cad2.length() )) {
-			//Si son distintas ya es false y si tienen distinto tamaño false también
-			boolean bSonIguales = true;
-			int i = cad1.length(); 
-			while (bSonIguales && i < cad2.length()) {
-				
-			}
-				
-		}
-		return bRes;
+
+	private static boolean esAnagrama(String cad1, String cad2) {
+
+		char[] stringtoChar1 = cad1.toCharArray();
+		Arrays.sort(stringtoChar1);
+		String sortedString1 = new String(stringtoChar1);
+		System.out.println("sortedString1:" + sortedString1);
+		char[] stringtoChar2 = cad2.toCharArray();
+		Arrays.sort(stringtoChar2);
+		String sortedString2 = new String(stringtoChar2);
+		System.out.println("sortedString2:" + sortedString2);
+		return sortedString2.equalsIgnoreCase(sortedString1);
+
 	}
 }
